@@ -1,0 +1,28 @@
+{
+  "name": "isolation-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:example1": "npx ts-node ./src/example1.ts",
+    "db:example2": "npx ts-node ./src/example2.ts",
+    "db:example3": "npx ts-node ./src/example3.ts",
+    "db-upgrade": "node -r ts-node/register ./src/db/upgrade-db",
+    "db-downgrade": "node -r ts-node/register ./src/db/downgrade-db",
+    "db-seed": "node -r ts-node/register ./src/db/seed-db",
+    "db-unseed": "node -r ts-node/register ./src/db/unseed-db"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "kalmia-sql-lib": "git+ssh://git@github.com:itkalmia/kalmia-sql-lib.git",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "author": "Tadej Vengust (Kalmia LTD)",
+  "license": "ISC"
+}
